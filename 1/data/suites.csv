@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 28 18:26:02 GMT 2024","Fri Jun 28 18:26:05 GMT 2024","3239","chromium","todo.spec.ts","ToDo list","","","Add a new item to ToDo list",""
+"passed","Fri Jun 28 18:26:10 GMT 2024","Fri Jun 28 18:26:12 GMT 2024","1442","chromium","user.spec.ts","User","","","Register new user",""
+"passed","Fri Jun 28 18:26:08 GMT 2024","Fri Jun 28 18:26:10 GMT 2024","2047","chromium","todo.spec.ts","ToDo list","","","Delete a ToDo list item",""
