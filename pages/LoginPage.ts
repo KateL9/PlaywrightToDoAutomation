@@ -1,5 +1,6 @@
 import { Page } from "@playwright/test";
 
+
 export default class LoginPage {
     private get emailField() {
         return 'email'

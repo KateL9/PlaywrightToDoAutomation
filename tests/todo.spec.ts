@@ -6,7 +6,7 @@ import NewToDoPage from '../pages/NewToDoPage';
 
 test.describe('ToDo list', () => {
     test('Add a new item to ToDo list', async ({ page, request, context }) => {
-        // register user via API
+
         const user = new User();
         const signUpPage = new SignUpPage;
         await signUpPage.signUpByApi(request, user, context);
@@ -22,16 +22,14 @@ test.describe('ToDo list', () => {
     })
 
     test('Delete a ToDo list item', async ({ page, request, context }) => {
-        // register user via API
+
         const user = new User();
         const signUpPage = new SignUpPage;
         await signUpPage.signUpByApi(request, user, context);
 
         const newToDoPage = new NewToDoPage();
         newToDoPage.addToDoByApi(request, user);
-        //await new ToDoApi().addToDoItem(request, user)
 
-        // Delete ToDo item via UI
         const toDoPage = new ToDoPage();
         toDoPage.navigateToDoPage(page);
         toDoPage.deleteToDo(page);

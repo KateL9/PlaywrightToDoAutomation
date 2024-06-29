@@ -12,4 +12,12 @@ export default class UserApi {
             }
         });
     }
+    async login (request: APIRequestContext) {
+        return await request.post('api/v1/users/login', {
+            data: {
+                email: 'emailTest@email.com',
+                password: 'Password1!',
+            }
+        });
+    }
 }
