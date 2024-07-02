@@ -16,6 +16,9 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
+        env:
+          TEST_USER_EMAIL: ${{ vars.TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ vars.TEST_USER_PASSWORD }}
 
       - name: Get Allure history
         uses: actions/checkout@v2
