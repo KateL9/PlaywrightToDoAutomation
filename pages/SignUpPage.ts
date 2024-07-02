@@ -1,6 +1,6 @@
 import { APIRequestContext, BrowserContext, Page } from "@playwright/test";
 import User from "../models/User";
-import UserApi from "../apis/UserAPI";
+//import UserApi from "../apis/UserAPI";
 import config from '../playwright.config';
 
 
@@ -23,7 +23,7 @@ export default class SignUpPage {
     private get submitButton() {
         return '[data-testid=submit]'
     };
-    async navigateToSignUp(page:Page) {
+    async navigateToSignUp(page: Page) {
         await page.goto("/signup")
     };
 
@@ -35,34 +35,34 @@ export default class SignUpPage {
         await page.getByTestId(this.confirmPasswordInput).fill(user.getPassword());
         await page.click(this.submitButton)
     }
-    async signUpByApi(request: APIRequestContext, user: User, context: BrowserContext) {
-        const response = await new UserApi().signUp(request, user);
+    // async signUpByApi(request: APIRequestContext, user: User, context: BrowserContext) {
+    //     const response = await new UserApi().signUp(request, user);
 
-        const responseBody = await response.json();
-        const access_token = responseBody.access_token;
-        const userID = responseBody.userID;
-        const firstName = responseBody.firstName;
+    //     const responseBody = await response.json();
+    //     const access_token = responseBody.access_token;
+    //     const userID = responseBody.userID;
+    //     const firstName = responseBody.firstName;
         
-        user.setAccessToken(access_token);
-        user.setUserId(userID);
+    //     user.setAccessToken(access_token);
+    //     user.setUserId(userID);
 
-        // Set cookies
-        await context.addCookies([
-            {
-                name: 'access_token',
-                value: access_token,
-                url: config.use?.baseURL,
-            },
-            {
-                name: 'userID',
-                value: userID,
-                url: config.use?.baseURL
-            },
-            {
-                name: 'firstName',
-                value: firstName,
-                url: config.use?.baseURL
-            },
-        ])
-    }
+    //     // Set cookies
+    //     await context.addCookies([
+    //         {
+    //             name: 'access_token',
+    //             value: access_token,
+    //             url: config.use?.baseURL,
+    //         },
+    //         {
+    //             name: 'userID',
+    //             value: userID,
+    //             url: config.use?.baseURL
+    //         },
+    //         {
+    //             name: 'firstName',
+    //             value: firstName,
+    //             url: config.use?.baseURL
+    //         },
+    //     ])
+    // }
 }

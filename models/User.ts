@@ -26,6 +26,7 @@ export default class User {
     getPassword() {
         return this.password
     }
+    // Duplicated code ????
     getUserId() {
         return this.userID
     }

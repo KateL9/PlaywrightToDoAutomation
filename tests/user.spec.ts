@@ -11,8 +11,9 @@ test.describe('User', () => {
         const signUp = new SignUpPage();
         await signUp.navigateToSignUp(page);
         await signUp.signUp(page,user);
-        
+
         const toDoPage = new ToDoPage();
+        await toDoPage.navigateToDoPage(page);
         const welcomeMessage = toDoPage.getWelcomeMessageElement(page)
         await expect(welcomeMessage).toBeVisible()
         
