@@ -19,7 +19,7 @@ jobs:
         env:
           TEST_USER_EMAIL: ${{ vars.TEST_USER_EMAIL }}
           TEST_USER_PASSWORD: ${{ vars.TEST_USER_PASSWORD }}
-
+          
       - name: Get Allure history
         uses: actions/checkout@v2
         continue-on-error: true
