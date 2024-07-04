@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import User from '../models/User';
 import ToDoPage from '../pages/ToDoPage';
 import NewToDoPage from '../pages/NewToDoPage';
-import SignUpByApiProvider from '../Provider/signUpByApiprovider';
+import SignUpByApiProvider from '../Provider/SignUpByApiprovider';
 
 test.describe('ToDo list', () => {
     test('Add a new item to ToDo list', async ({ page, request, context }) => {

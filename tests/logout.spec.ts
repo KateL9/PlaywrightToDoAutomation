@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import LogoutPage from '../pages/LogoutPage';
-import LoginByApiProvider from '../Provider/LoginbyAPiProvider';
+//import LoginByApiProvider from '../Provider/LoginbyAPiProvider';
+import LoginByApiProvider from '../Provider/LoginByAPiProvider';
 import LoginPage from '../pages/LoginPage'
 
 test.describe('Logout test', () => {

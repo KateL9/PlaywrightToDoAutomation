@@ -1,7 +1,8 @@
 import { APIRequestContext, BrowserContext } from "@playwright/test";
 import UserApi from "../apis/UserAPI";
 import SetCookies from "../Helper/SetCookies";
-import UserApiProvider from "./userApiProvider";
+//import UserApiProvider from "./userApiProvider";
+import UserApiProvider from "./UserApiProvider";
 import User from "../models/User";
 
 export default class LoginByApiProvider {

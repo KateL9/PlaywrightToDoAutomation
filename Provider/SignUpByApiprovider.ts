@@ -1,9 +1,9 @@
 import { APIRequestContext, BrowserContext } from "@playwright/test";
 import UserApi from "../apis/UserAPI";
 import User from "../models/User";
-//import config from '../playwright.config';
 import SetCookies from "../Helper/SetCookies";
-import UserApiProvider from "./userApiProvider";
+//import UserApiProvider from "./userApiProvider";
+import UserApiProvider from "./UserApiProvider";
 
 export default class SignUpByApiProvider {
     async signUpByApi(request: APIRequestContext, user: User, context: BrowserContext) {

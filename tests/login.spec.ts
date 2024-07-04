@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import ToDoPage from '../pages/ToDoPage';
-import LoginByApiProvider from '../Provider/LoginbyAPiProvider';
+import LoginByApiProvider from '../Provider/LoginByAPiProvider';
 
 test.describe('Login to ToDoQaCart', () => {
     test('Login', async ({ page, request, context }) => {
