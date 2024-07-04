@@ -12,13 +12,11 @@ export default class UserApi {
             }
         });
     }
-    async login (request: APIRequestContext) {
+    async login (request: APIRequestContext, email: string, password: string) {
         return await request.post('api/v1/users/login', {
-            // const email = process.env.TEST_USER_EMAIL;
-            // const password = process.env.TEST_USER_PASSWORD;
             data: {
-                email: 'emailTest@email.com',
-                password: 'Password1!',
+                email: email,
+                password: password
             }
         });
     }

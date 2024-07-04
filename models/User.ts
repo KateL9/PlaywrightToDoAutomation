@@ -5,8 +5,6 @@ export default class User {
     private firstName: string;
     private lastName: string;
     private password: string;
-    private accessToken: string;
-    private userID: string;
 
     constructor() {
         this.email = faker.internet.email();
@@ -25,18 +23,5 @@ export default class User {
     }
     getPassword() {
         return this.password
-    }
-    // Duplicated code ????
-    getUserId() {
-        return this.userID
-    }
-    setUserId(userID: string) {
-        this.userID = userID
-    }
-    getAccessToken() {
-        return this.accessToken
-    }
-    setAccessToken(accessToken: string) {
-        this.accessToken = accessToken
     }
 }

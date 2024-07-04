@@ -1,6 +1,6 @@
 import { APIRequestContext, Page } from "@playwright/test";
-import User from "../models/User";
 import ToDoApi from "../apis/ToDoAPI";
+import UserApiProvider from "../Provider/userApiProvider";
 
 export default class NewToDoPage {
     private get newTodoField() {
@@ -9,9 +9,6 @@ export default class NewToDoPage {
     private get submitButon() {
         return 'submit-newTask'
     }
-    // private get toDoText() {
-    //     return 'todo-text'
-    // }
     async navigateNewToDoPage(page: Page) {
         await page.goto('/todo/new')
     }
@@ -21,7 +18,7 @@ export default class NewToDoPage {
     async submitNewToDo(page: Page) {
         await page.getByTestId(this.submitButon).click();
     }
-    async addToDoByApi(request: APIRequestContext, user:User) {
-        await new ToDoApi().addToDoItem(request, user)
+    async addToDoByApi(request: APIRequestContext, userApiProvider: UserApiProvider) {
+        await new ToDoApi().addToDoItem(request, userApiProvider);
     }
 }

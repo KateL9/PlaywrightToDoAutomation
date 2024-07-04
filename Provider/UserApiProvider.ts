@@ -1,7 +1,13 @@
+import User from "../models/User";
+
 export default class UserApiProvider {
     private userID: string;
     private accessToken: string;
-    
+    private user: User;
+
+    constructor(user: User) {
+        this.user = user
+    }
     getUserId() {
         return this.userID
     }
@@ -13,5 +19,8 @@ export default class UserApiProvider {
     }
     setAccessToken(accessToken: string) {
         this.accessToken = accessToken
+    }
+    getUser() {
+        return this.user
     }
 }

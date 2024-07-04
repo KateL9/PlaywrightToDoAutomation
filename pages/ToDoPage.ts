@@ -1,12 +1,11 @@
 import { Page } from "@playwright/test";
-//import User from "../models/User";
 
 export default class ToDoPage {
     private get welcomeMessage() {
-        return 'welcome'
+        return `[data-testid=welcome]`
     }
     private get deleteIcon() {
-        return 'delete'
+        return '[data-testid=delete]'
     }
     private get noTodos() {
         return 'no-todos'
@@ -15,13 +14,13 @@ export default class ToDoPage {
         return 'todo-text'
     }
     getWelcomeMessageElement(page: Page) {
-        return page.getByTestId(this.welcomeMessage)
+        return page.locator(this.welcomeMessage);
     }
     async navigateToDoPage(page: Page) {
-        await page.goto('/todo')
+        await page.goto('/todo');
     }
     async deleteToDo(page: Page) {
-        await page.getByTestId(this.deleteIcon).click();
+        await page.click(this.deleteIcon);
     }
     async getNoToDoMessage(page: Page) {
         return page.getByTestId(this.noTodos)
@@ -29,5 +28,4 @@ export default class ToDoPage {
     getToDoInput(page: Page) {
         return page.getByTestId(this.toDoText)
     }
-
 }
