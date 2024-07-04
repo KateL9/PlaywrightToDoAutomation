@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jul 04 20:24:21 GMT 2024","Thu Jul 04 20:24:23 GMT 2024","2052","chromium","todo.spec.ts","ToDo list","","","Delete a ToDo list item",""
+"passed","Thu Jul 04 20:24:15 GMT 2024","Thu Jul 04 20:24:17 GMT 2024","1952","chromium","login.spec.ts","Login to ToDoQaCart","","","Login",""
+"passed","Thu Jul 04 20:24:17 GMT 2024","Thu Jul 04 20:24:19 GMT 2024","1896","chromium","logout.spec.ts","Logout test","","","Logout by Graphical User Interface",""
+"passed","Thu Jul 04 20:24:23 GMT 2024","Thu Jul 04 20:24:25 GMT 2024","2497","chromium","user.spec.ts","User","","","Register new user",""
+"passed","Thu Jul 04 20:24:19 GMT 2024","Thu Jul 04 20:24:21 GMT 2024","2050","chromium","todo.spec.ts","ToDo list","","","Add a new item to ToDo list",""
