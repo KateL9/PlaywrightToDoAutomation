@@ -1,8 +1,7 @@
 import { APIRequestContext, BrowserContext } from "@playwright/test";
 import UserApi from "../apis/UserAPI";
 import User from "../models/User";
-import SetCookies from "../Helper/SetCookies";
-//import UserApiProvider from "./userApiProvider";
+import Cookies from "../Helper/Cookies";
 import UserApiProvider from "./UserApiProvider";
 
 export default class SignUpByApiProvider {
@@ -16,7 +15,7 @@ export default class SignUpByApiProvider {
         const userApiProvider = new UserApiProvider(user);
         userApiProvider.setAccessToken(access_token);
         userApiProvider.setUserId(userID);
-        const cookies = new SetCookies();
+        const cookies = new Cookies();
         await cookies.setCookies(context, access_token, userID, firstName);
         return userApiProvider;
     }

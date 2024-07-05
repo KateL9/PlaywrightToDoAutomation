@@ -3,6 +3,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-playwright.config
+playwright.config.ts
 .vscode
 allure-results

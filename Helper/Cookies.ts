@@ -1,7 +1,7 @@
 import { BrowserContext } from '@playwright/test';
 import config from '../playwright.config';
 
-export default class SetCookies {
+export default class Cookies {
     async setCookies(context: BrowserContext, access_token: string, userID: string, firstName: string) {
         await context.addCookies([
             {
@@ -20,6 +20,8 @@ export default class SetCookies {
                 url: config.use?.baseURL
             },
         ])
+    };
+    async clearCookies( context: BrowserContext ) {
+        await context.clearCookies();
     }
-
 }

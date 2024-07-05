@@ -1,6 +1,4 @@
 import { APIRequestContext } from "@playwright/test";
-//import UserApiProvider from "../Provider/userApiProvider";
-//import UserApiProvider from "../Provider/UserApiProvider";
 import UserApiProvider from "./UserApiProvider";
 
 export default class ToDoApi {
